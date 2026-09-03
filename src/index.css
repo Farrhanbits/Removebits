@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+@theme {
+  --color-purple-primary: #A855F7;
+  --color-purple-light: #C084FC;
+  --color-purple-dark: #9333EA;
+  --color-bg-dark: #171121;
+  --color-bg-deep: #120F17;
+}
+
+:root {
+  --purple-primary: #A855F7;
+  --purple-light: #C084FC;
+  --purple-dark: #9333EA;
+  --bg-dark: #171121;
+  --bg-deep: #120F17;
+  color-scheme: dark;
+  background-color: #120F17;
+  color: #f3f4f6;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #120F17;
+  color: #f3f4f6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #120F17;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2e1e47;
+  border-radius: 9999px;
+  border: 2px solid #120F17;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A855F7;
+}
+
+/* Glow Utilities */
+.purple-glow {
+  box-shadow: 0 0 35px -5px rgba(168, 85, 247, 0.45);
+}
+
+.purple-glow-sm {
+  box-shadow: 0 0 15px -2px rgba(168, 85, 247, 0.35);
+}
+
+.purple-glow-lg {
+  box-shadow: 0 0 70px 0px rgba(168, 85, 247, 0.3);
+}
+
+.text-glow-purple {
+  text-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: rgba(23, 17, 33, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(168, 85, 247, 0.18);
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(23, 17, 33, 0.85) 0%, rgba(18, 15, 23, 0.9) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(168, 85, 247, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(168, 85, 247, 0.5);
+  box-shadow: 0 10px 30px -10px rgba(168, 85, 247, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Radial Gradient Mesh Backgrounds */
+.bg-radial-purple {
+  background: radial-gradient(circle at 50% 20%, rgba(168, 85, 247, 0.15) 0%, transparent 65%);
+}
+
+.bg-hero-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(168, 85, 247, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(168, 85, 247, 0.05) 1px, transparent 1px);
+}
+
+/* 3D Perspective Container */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Animated Scanning Beam for AI Object Removal */
+@keyframes scan-beam {
+  0% {
+    top: 0%;
+    opacity: 0.8;
+  }
+  50% {
+    top: 96%;
+    opacity: 1;
+  }
+  100% {
+    top: 0%;
+    opacity: 0.8;
+  }
+}
+
+.animate-scan-beam {
+  animation: scan-beam 2s ease-in-out infinite;
+}
+
+@keyframes pulse-purple {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-purple {
+  animation: pulse-purple 3s ease-in-out infinite;
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+.animate-float {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
